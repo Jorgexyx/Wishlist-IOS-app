@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import { EvilIcons, MaterialCommunityIcons, SimpleLineIcons  } from '@expo/vector-icons';
 
@@ -31,7 +31,11 @@ class HomeScreen extends Component {
 			<View style={{flex: 7}}>
 				<Text style={Styles.text}> HOLIDAY DEALS </Text>
 				<View style={{flex: 2, flexDirection: 'row', justifyContent: 'space-around', alignContent: 'space-around', flexWrap: 'wrap'}}>
-					<Image  source ={require('../Images/Appliances.jpg')} style={{width : 150, height: 150 }}/>
+
+					<ImageBackground  source ={require('../Images/Appliances.jpg')} style={{width : 150, height: 150 }}>
+						<Text> test </Text>
+					</ImageBackground>
+
 					<Image  source ={require('../Images/Smart.jpg')} style={{width : 150, height: 150 }}/>
 					<Image  source ={require('../Images/Toys.jpg')} style={{width : 150, height: 150 }}/>
 					<Image  source ={require('../Images/Recs.jpg')} style={{width : 150, height: 150 }}/>
@@ -57,6 +61,10 @@ const Styles = StyleSheet.create({
 	text: {
 		fontFamily: 'Avenir-Light',
 		color: '#A9A9A9',
+	},
+	image: {
+	 width: 150,
+	 height: 150
 	},
 });
 
