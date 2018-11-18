@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableHighlight, View, Image, ImageBackground } fr
 import { SearchBar } from 'react-native-elements';
 import { EvilIcons, MaterialCommunityIcons, SimpleLineIcons  } from '@expo/vector-icons';
 
-class HomeScreen extends Component {
+class MakeupScreen extends Component {
 	static navigationOptions = { header: null }
 	render() {
 		return (
@@ -27,9 +27,9 @@ class HomeScreen extends Component {
 				</View>
 			
 			<View style={{flex: 7}}>
-				<Text style={Styles.text}> HOLIDAY DEALS </Text>
+				<Text style={Styles.text}> MAKEUP DEALS </Text>
 				<View style={{flex: 2, flexDirection: 'row', justifyContent: 'space-around', alignContent: 'space-around', flexWrap: 'wrap'}}>
-					<TouchableHighlight onPress= {() => this.props.navigation.navigate('Makeup')} >
+					<TouchableHighlight >
 					<ImageBackground  source ={require('../Images/makeup.jpg')} style={{width : 150, height: 150 }}>
 						<View style={Styles.textOverlay}>
 							<View style={Styles.overlay} />
@@ -40,36 +40,6 @@ class HomeScreen extends Component {
 						</View>
 					</ImageBackground>
 					</TouchableHighlight>
-
-					<ImageBackground  source ={require('../Images/Smart.jpg')} style={{width : 150, height: 150 }}>
-						<View style={Styles.textOverlay}>
-							<View style={Styles.overlay} />
-								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
-									<Text style={[Styles.text, {color:'#ffffff'}]}> SMART GADGETS </Text>	
-									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
-								</View>
-						</View>
-					</ImageBackground>
-
-					<ImageBackground  source ={require('../Images/Toys.jpg')} style={{width : 150, height: 150 }}>
-						<View style={Styles.textOverlay}>
-							<View style={Styles.overlay} />
-								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
-									<Text style={[Styles.text, {color:'#ffffff'}]}> TOYS </Text>	
-									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
-								</View>
-						</View>
-					</ImageBackground>
-
-					<ImageBackground  source ={require('../Images/Recs.jpg')} style={{width : 150, height: 150 }}>
-						<View style={Styles.textOverlay}>
-							<View style={Styles.overlay} />
-								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
-									<Text style={[Styles.text, {color:'#ffffff'}]}> OUTDOORS </Text>	
-									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
-								</View>
-						</View>
-					</ImageBackground>
 
 				</View>
 				
@@ -122,4 +92,4 @@ const Styles = StyleSheet.create({
 });
 
 
-export default HomeScreen;
+export default MakeupScreen;
