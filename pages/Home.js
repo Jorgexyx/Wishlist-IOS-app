@@ -32,13 +32,46 @@ class HomeScreen extends Component {
 				<Text style={Styles.text}> HOLIDAY DEALS </Text>
 				<View style={{flex: 2, flexDirection: 'row', justifyContent: 'space-around', alignContent: 'space-around', flexWrap: 'wrap'}}>
 
-					<ImageBackground  source ={require('../Images/Appliances.jpg')} style={{width : 150, height: 150 }}>
-						<Text> test </Text>
+					<ImageBackground  source ={require('../Images/makeup.jpg')} style={{width : 150, height: 150 }}>
+						<View style={Styles.textOverlay}>
+							<View style={Styles.overlay} />
+								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
+									<Text style={[Styles.text, {color:'#ffffff'}]}> MAKEUP </Text>	
+									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
+								</View>
+						</View>
 					</ImageBackground>
 
-					<Image  source ={require('../Images/Smart.jpg')} style={{width : 150, height: 150 }}/>
-					<Image  source ={require('../Images/Toys.jpg')} style={{width : 150, height: 150 }}/>
-					<Image  source ={require('../Images/Recs.jpg')} style={{width : 150, height: 150 }}/>
+					<ImageBackground  source ={require('../Images/Smart.jpg')} style={{width : 150, height: 150 }}>
+						<View style={Styles.textOverlay}>
+							<View style={Styles.overlay} />
+								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
+									<Text style={[Styles.text, {color:'#ffffff'}]}> SMART GADGETS </Text>	
+									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
+								</View>
+						</View>
+					</ImageBackground>
+
+					<ImageBackground  source ={require('../Images/Toys.jpg')} style={{width : 150, height: 150 }}>
+						<View style={Styles.textOverlay}>
+							<View style={Styles.overlay} />
+								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
+									<Text style={[Styles.text, {color:'#ffffff'}]}> TOYS </Text>	
+									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
+								</View>
+						</View>
+					</ImageBackground>
+
+					<ImageBackground  source ={require('../Images/Recs.jpg')} style={{width : 150, height: 150 }}>
+						<View style={Styles.textOverlay}>
+							<View style={Styles.overlay} />
+								<View style={{flex: 1, justifyContent: 'space-between', flexDirection: 'row', alignContent: 'center'}} >
+									<Text style={[Styles.text, {color:'#ffffff'}]}> OUTDOORS </Text>	
+									<SimpleLineIcons name="arrow-right" size={18} color='#ffffff' />
+								</View>
+						</View>
+					</ImageBackground>
+
 				</View>
 				
 			</View>
@@ -55,12 +88,33 @@ const Styles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-around',
 	},
+
 	search: {
 		flex: 2,
 	},
+
 	text: {
 		fontFamily: 'Avenir-Light',
 		color: '#A9A9A9',
+	},
+	textOverlay: {
+		position: 'absolute',
+		top: 110,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		justifyContent: 'center'
+	},
+	overlay: {
+		flex:1,
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		opacity: 0.4,
+		height: 40,
+		backgroundColor: '#000000',
 	},
 	image: {
 	 width: 150,
